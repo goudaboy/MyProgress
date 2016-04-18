@@ -1,0 +1,84 @@
+header {
+  position: relative;
+  height: 90px;
+  background: yellow;
+}
+header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.topmenu {
+  position: relative;
+  padding: 5px;
+  background: grey;
+  color: white;
+  text-align: left;
+}
+.topmenu__list {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.topmenu__list-item {
+  display: inline-block;
+}
+.topmenu__list-item-btn {
+  display: block;
+  color: white;
+  text-transform: none;
+  text-transform: uppercase;
+}
+.mainmenu {
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.mainmenu__list {
+  padding: 0;
+  margin: 0;
+}
+.mainmenu__list-item {
+  height: 50px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.mainmenu__list-item:not(.no-child) {
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  -o-transition: height 0.5s;
+}
+.mainmenu__list-item:not(.no-child):hover {
+  height: 250px;
+}
+.mainmenu__list-item-btn {
+  display: block;
+  padding: 15px;
+  color: black;
+  text-transform: none;
+  text-transform: uppercase;
+}
+media screen (min-height:10px) header {
+  background: red;
+}
+.submenu {
+  text-transform: uppercase;
+}
+.submenu__list {
+  background: white;
+  position: absolute;
+  display: none;
+  margin: 0;
+  padding: 15px;
+}
+.submenu__list-item {
+  display: block;
+}
+.submenu__list-item-btn {
+  display: block;
+  color: black;
+  text-transform: none;
+  text-transform: uppercase;
+}

@@ -1,0 +1,121 @@
+// CSS
+
+header{
+	
+	position: relative;
+	
+	height: 90px;
+	background: yellow;
+
+	&.sticky{
+		position: fixed;
+		top:0;
+		left:0;
+		right:0;
+	}
+
+
+}
+
+.topmenu{
+
+	position: relative;
+	padding: 5px;
+
+	background: grey;
+	color: white;
+
+	text-align: left;
+	
+	&__list{
+
+		position: relative;
+		padding: 0;
+		margin:0;
+
+		&-item{
+			display:inline-block;
+			
+			&-btn{
+				display:block;
+				color: white;
+				text-transform: none;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+// media screen and (min-width: 1234px) and (min-height:10px) {}
+
+.mainmenu{
+
+	.drop-shadow (0, 5px, 5px, 0, 0.20);
+	
+	&__list{
+
+		padding: 0;
+		margin:0;
+
+		&-item{
+		
+			&:not(.no-child){
+
+				.transition (height 0.5s);
+				
+				&:hover {
+				    height: 250px;
+				}
+
+			}
+
+			height: 50px;
+			text-transform: uppercase;
+
+			
+
+			display:inline-block;
+
+			&-btn{
+				display:block;
+				padding: 15px;
+				color: black;
+				text-transform: none;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+media screen (min-height:10px) {
+	header{
+		background:red;
+	}
+}
+
+.submenu{
+
+	text-transform: uppercase;
+
+	&__list{
+	
+		background: white;
+		
+		position: absolute;
+		display:none;
+		
+		margin:0;
+		padding:15px;
+
+		&-item{
+			display:block;
+
+			&-btn{
+				display:block;
+				color: black;
+				text-transform: none;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

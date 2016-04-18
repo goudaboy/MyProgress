@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".mainmenu__list-item").hover(function(){$(this).children("ul").stop(!0,!1,!0).slideToggle(300)}),$(window).scroll(function(){var a=$(this).scrollTop();a>100?$("header").addClass("sticky"):$("header").removeClass("sticky")})});
