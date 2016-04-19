@@ -1,8 +1,11 @@
 // CSS
 
-header{
+@screen-lg: 1170px;
+
+.header{
 	
 	position: relative;
+	z-index: 1000;
 	
 	height: 90px;
 	background: yellow;
@@ -12,9 +15,43 @@ header{
 		top:0;
 		left:0;
 		right:0;
+
+		animation:mymove 0.5s ease forwards;
+		animation-iteration-count:1;
+
+		/* Safari and Chrome */
+		-webkit-animation:mymove 0.5s;
+		-webkit-animation-iteration-count:1;
+
+		.drop-shadow (0, 5px, 5px, 0, 0.20);
 	}
 
+	&__container{
+		height: 100%;
+	}
+	
+	&__logo{
+		
+		height: 100%;
+		
+		&-image{
+			height: 100%;	
+		}
 
+	}
+
+}
+
+@keyframes mymove
+{ 
+	from {top:40px; opacity: 1;}
+	to {top:0; opacity: 1}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+	from {top:40px; opacity: 1;}
+	to {top:0; opacity: 1;}
 }
 
 .topmenu{
@@ -31,7 +68,8 @@ header{
 
 		position: relative;
 		padding: 0;
-		margin:0;
+		margin: 0 auto;
+		max-width: @screen-lg;
 
 		&-item{
 			display:inline-block;
@@ -49,37 +87,51 @@ header{
 // media screen and (min-width: 1234px) and (min-height:10px) {}
 
 .mainmenu{
+	
+	position:absolute;
+	z-index: 100;
+	background: white;
+
+	left:0;
+	right:0;
+
+	transition: height 0.5s;
+	height: 50px;
 
 	.drop-shadow (0, 5px, 5px, 0, 0.20);
+
+	&.hover{
+		
+		height : 250px;
+	}
 	
 	&__list{
-
+	
+		position: relative;
 		padding: 0;
-		margin:0;
+		margin: 0 auto;
+		max-width: @screen-lg;
 
 		&-item{
 		
-			&:not(.no-child){
+			// &:not(.no-child){
 
-				.transition (height 0.5s);
+			// 	.transition (height 0.5s);
 				
-				&:hover {
-				    height: 250px;
-				}
+			// 	&:hover {
+			// 	    height: 250px;
+			// 	}
 
-			}
+			// }
 
 			height: 50px;
 			text-transform: uppercase;
-
-			
-
 			display:inline-block;
 
 			&-btn{
 				display:block;
 				padding: 15px;
-				color: black;
+				color: #729ac4;
 				text-transform: none;
 				text-transform: uppercase;
 			}
@@ -98,21 +150,36 @@ media screen (min-height:10px) {
 	text-transform: uppercase;
 
 	&__list{
-	
+
+		position: absolute;
 		background: white;
 		
-		position: absolute;
-		display:none;
-		
+		visibility: hidden;
+		opacity:0;
+		transition: visibility 0s, opacity 0.5s linear ,height 0.5s;
 		margin:0;
-		padding:15px;
+		
+		height:0;
+
+		overflow:hidden;
+		list-style: none;
+
+		&.hover{
+			visibility: visible;
+ 	 		opacity:1;
+			height:200px;
+			padding:15px;
+		}
 
 		&-item{
-			display:block;
+			// display:block;
 
 			&-btn{
-				display:block;
-				color: black;
+				// display:block;
+				
+				font-size: .85em;
+    			line-height: 2em;
+				color: #627692;
 				text-transform: none;
 				text-transform: uppercase;
 			}

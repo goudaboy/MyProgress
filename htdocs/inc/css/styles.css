@@ -1,13 +1,52 @@
-header {
+.header {
   position: relative;
+  z-index: 1000;
   height: 90px;
   background: yellow;
 }
-header.sticky {
+.header.sticky {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  animation: mymove 0.5s ease forwards;
+  animation-iteration-count: 1;
+  /* Safari and Chrome */
+  -webkit-animation: mymove 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.header__container {
+  height: 100%;
+}
+.header__logo {
+  height: 100%;
+}
+.header__logo-image {
+  height: 100%;
+}
+@keyframes mymove {
+  from {
+    top: 40px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes mymove {
+  /* Safari and Chrome */
+  from {
+    top: 40px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 .topmenu {
   position: relative;
@@ -19,7 +58,8 @@ header.sticky {
 .topmenu__list {
   position: relative;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1170px;
 }
 .topmenu__list-item {
   display: inline-block;
@@ -31,32 +71,35 @@ header.sticky {
   text-transform: uppercase;
 }
 .mainmenu {
+  position: absolute;
+  z-index: 100;
+  background: white;
+  left: 0;
+  right: 0;
+  transition: height 0.5s;
+  height: 50px;
   -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
+.mainmenu.hover {
+  height: 250px;
+}
 .mainmenu__list {
+  position: relative;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1170px;
 }
 .mainmenu__list-item {
   height: 50px;
   text-transform: uppercase;
   display: inline-block;
 }
-.mainmenu__list-item:not(.no-child) {
-  -webkit-transition: height 0.5s;
-  -moz-transition: height 0.5s;
-  -ms-transition: height 0.5s;
-  -o-transition: height 0.5s;
-}
-.mainmenu__list-item:not(.no-child):hover {
-  height: 250px;
-}
 .mainmenu__list-item-btn {
   display: block;
   padding: 15px;
-  color: black;
+  color: #729ac4;
   text-transform: none;
   text-transform: uppercase;
 }
@@ -67,18 +110,26 @@ media screen (min-height:10px) header {
   text-transform: uppercase;
 }
 .submenu__list {
-  background: white;
   position: absolute;
-  display: none;
+  background: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear ,height 0.5s;
   margin: 0;
+  height: 0;
+  overflow: hidden;
+  list-style: none;
+}
+.submenu__list.hover {
+  visibility: visible;
+  opacity: 1;
+  height: 200px;
   padding: 15px;
 }
-.submenu__list-item {
-  display: block;
-}
 .submenu__list-item-btn {
-  display: block;
-  color: black;
+  font-size: .85em;
+  line-height: 2em;
+  color: #627692;
   text-transform: none;
   text-transform: uppercase;
 }

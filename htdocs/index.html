@@ -14,40 +14,11 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <link rel="stylesheet" href="inc/css/styles.css">
 
-	<style> 
-		.mainmenu {
-		    width: 100px;
-		    height: 100px;
-		    background-color: red;
-		    position: relative;
-		    -webkit-animation: myfirst 5s linear 2s infinite alternate; /* Chrome, Safari, Opera */
-		    animation: myfirst 5s linear 2s infinite alternate;
-		}
-
-		/* Chrome, Safari, Opera */
-		@-webkit-keyframes myfirst {
-		    0%   {background-color:red; left:0px; top:0px;}
-		    25%  {background-color:yellow; left:200px; top:0px;}
-		    50%  {background-color:blue; left:200px; top:200px;}
-		    75%  {background-color:green; left:0px; top:200px;}
-		    100% {background-color:red; left:0px; top:0px;}
-		}
-
-		/* Standard syntax */
-		@keyframes myfirst {
-		    0%   {background-color:red; left:0px; top:0px;}
-		    25%  {background-color:yellow; left:200px; top:0px;}
-		    50%  {background-color:blue; left:200px; top:200px;}
-		    75%  {background-color:green; left:0px; top:200px;}
-		    100% {background-color:red; left:0px; top:0px;}
-		}
-	</style>
-
 </head>
 <body>
 	
 	
-	<nav class="topmenu container">
+	<nav class="topmenu" id="topmenu">
 		<ul class="topmenu__list">
 			<li class="topmenu__list-item"><a href="" class="topmenu__list-item-btn">Topmenu list item 1</a></li>
 			<li class="topmenu__list-item"><a href="" class="topmenu__list-item-btn">Topmenu list item 2</a></li>
@@ -55,10 +26,23 @@
 		</ul>
 	</nav>
 
-	<header></header>
+	<header class="header">
+		<section class="header__container container">
+			<div class="menu-sticky__section--left col-md-3 header__logo">
+				<a href="/" title="Homepage"><img src="http://placehold.it/350?text=logo" class="header__logo-image" /></a>
+			</div>
+			<nav class="menu-sticky__section--middle col-md-6">
+						<a href="/contactanos" class="btn btn-normal">Contacto</a>				
+						<a href="/llamame" class="btn btn-normal">Llámame</a>				
+			</nav>
+			<div class="menu-sticky__call-to-action col-md-3">
+				<a href="tel:0034628809736" class="call-to-action__link"><img src="/Files/Templates/Designs/Mirage/img/icon__phone.png" class="call-to-action__icon-phone">(0034) 6 28 80 97 36 </a>			
+			</div>
+		</section>
+	</header>
 
-	<nav class="mainmenu">
-		<ul class="mainmenu__list">
+	<nav class="mainmenu container-fluid">
+		<ul class="mainmenu__list container">
 			<li class="mainmenu__list-item">
 				<a href="" class="mainmenu__list-item-btn">Adicción</a>
 				<ul class="submenu__list">
@@ -110,36 +94,37 @@
 			</li>
 		</ul>
 	</nav>
-
-	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus sit assumenda veniam eius quas modi praesentium ducimus dolorum quia nulla, a aut labore sed vel neque rem est blanditiis beatae!</div>
-	<div>Dolorem, nihil reiciendis quisquam, rerum nulla reprehenderit veritatis non accusantium illum quam deserunt nostrum perspiciatis earum natus in minima facere sint! Esse ad consequuntur adipisci consectetur magnam. Perspiciatis, iusto, maiores.</div>
-	<div>Illum omnis sit, sunt, reiciendis eligendi iste repellendus pariatur, tenetur eaque praesentium consequatur, quidem atque totam. Praesentium magni ad architecto quas cum laudantium debitis, at obcaecati dolore minus, in porro!</div>
-	<div>Voluptate unde ut sed magni, dolor vero recusandae obcaecati, in eum facilis blanditiis modi, aperiam nesciunt dolorum veniam beatae amet necessitatibus fugit esse dolores ea eos minima, mollitia tenetur dicta.</div>
-	<div>Alias quis, saepe perspiciatis necessitatibus suscipit ullam sit inventore pariatur iusto quas, dolorem praesentium. Cumque repellat culpa molestiae, cupiditate illo at necessitatibus reiciendis doloribus, numquam labore maxime perferendis commodi sed?</div>
-	<div>Veniam porro fugiat distinctio quidem, minima voluptatum, beatae labore architecto enim obcaecati voluptates placeat esse eaque explicabo facere consequatur adipisci accusamus animi aliquam minus, laboriosam ipsa laborum officia. Velit, minus!</div>
-	<div>Perspiciatis alias, sint illum in dicta earum expedita optio natus maxime tempora. Possimus deleniti ratione, quos ullam neque quo laboriosam magnam, quaerat labore vel quas alias odit maiores magni consequatur.</div>
-	<div>Repellendus saepe eveniet assumenda ipsum, deleniti! Aperiam architecto animi deserunt quam illo totam? Minima, asperiores corporis voluptas voluptatem fuga, doloribus ex odio laborum, numquam quas omnis voluptates totam natus tempora.</div>
-	<div>Ea facere nisi architecto itaque, at nesciunt amet neque dicta ullam! Eaque consequuntur in repudiandae provident possimus, quibusdam cumque voluptatibus, maxime consequatur dolorem illum blanditiis quos minus, obcaecati omnis. Quam!</div>
-	<div>A eveniet saepe, voluptatem asperiores ducimus sunt cupiditate quis, ullam adipisci id, quam expedita ut necessitatibus accusamus vitae iure, sed nostrum! Architecto cupiditate nulla excepturi laudantium perferendis obcaecati, pariatur incidunt.</div>
-	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus sit assumenda veniam eius quas modi praesentium ducimus dolorum quia nulla, a aut labore sed vel neque rem est blanditiis beatae!</div>
-	<div>Dolorem, nihil reiciendis quisquam, rerum nulla reprehenderit veritatis non accusantium illum quam deserunt nostrum perspiciatis earum natus in minima facere sint! Esse ad consequuntur adipisci consectetur magnam. Perspiciatis, iusto, maiores.</div>
-	<div>Illum omnis sit, sunt, reiciendis eligendi iste repellendus pariatur, tenetur eaque praesentium consequatur, quidem atque totam. Praesentium magni ad architecto quas cum laudantium debitis, at obcaecati dolore minus, in porro!</div>
-	<div>Voluptate unde ut sed magni, dolor vero recusandae obcaecati, in eum facilis blanditiis modi, aperiam nesciunt dolorum veniam beatae amet necessitatibus fugit esse dolores ea eos minima, mollitia tenetur dicta.</div>
-	<div>Alias quis, saepe perspiciatis necessitatibus suscipit ullam sit inventore pariatur iusto quas, dolorem praesentium. Cumque repellat culpa molestiae, cupiditate illo at necessitatibus reiciendis doloribus, numquam labore maxime perferendis commodi sed?</div>
-	<div>Veniam porro fugiat distinctio quidem, minima voluptatum, beatae labore architecto enim obcaecati voluptates placeat esse eaque explicabo facere consequatur adipisci accusamus animi aliquam minus, laboriosam ipsa laborum officia. Velit, minus!</div>
-	<div>Perspiciatis alias, sint illum in dicta earum expedita optio natus maxime tempora. Possimus deleniti ratione, quos ullam neque quo laboriosam magnam, quaerat labore vel quas alias odit maiores magni consequatur.</div>
-	<div>Repellendus saepe eveniet assumenda ipsum, deleniti! Aperiam architecto animi deserunt quam illo totam? Minima, asperiores corporis voluptas voluptatem fuga, doloribus ex odio laborum, numquam quas omnis voluptates totam natus tempora.</div>
-	<div>Ea facere nisi architecto itaque, at nesciunt amet neque dicta ullam! Eaque consequuntur in repudiandae provident possimus, quibusdam cumque voluptatibus, maxime consequatur dolorem illum blanditiis quos minus, obcaecati omnis. Quam!</div>
-	<div>A eveniet saepe, voluptatem asperiores ducimus sunt cupiditate quis, ullam adipisci id, quam expedita ut necessitatibus accusamus vitae iure, sed nostrum! Architecto cupiditate nulla excepturi laudantium perferendis obcaecati, pariatur incidunt.</div>
-	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus sit assumenda veniam eius quas modi praesentium ducimus dolorum quia nulla, a aut labore sed vel neque rem est blanditiis beatae!</div>
-	<div>Dolorem, nihil reiciendis quisquam, rerum nulla reprehenderit veritatis non accusantium illum quam deserunt nostrum perspiciatis earum natus in minima facere sint! Esse ad consequuntur adipisci consectetur magnam. Perspiciatis, iusto, maiores.</div>
-	<div>Illum omnis sit, sunt, reiciendis eligendi iste repellendus pariatur, tenetur eaque praesentium consequatur, quidem atque totam. Praesentium magni ad architecto quas cum laudantium debitis, at obcaecati dolore minus, in porro!</div>
-	<div>Voluptate unde ut sed magni, dolor vero recusandae obcaecati, in eum facilis blanditiis modi, aperiam nesciunt dolorum veniam beatae amet necessitatibus fugit esse dolores ea eos minima, mollitia tenetur dicta.</div>
-	<div>Alias quis, saepe perspiciatis necessitatibus suscipit ullam sit inventore pariatur iusto quas, dolorem praesentium. Cumque repellat culpa molestiae, cupiditate illo at necessitatibus reiciendis doloribus, numquam labore maxime perferendis commodi sed?</div>
-	<div>Veniam porro fugiat distinctio quidem, minima voluptatum, beatae labore architecto enim obcaecati voluptates placeat esse eaque explicabo facere consequatur adipisci accusamus animi aliquam minus, laboriosam ipsa laborum officia. Velit, minus!</div>
-	<div>Perspiciatis alias, sint illum in dicta earum expedita optio natus maxime tempora. Possimus deleniti ratione, quos ullam neque quo laboriosam magnam, quaerat labore vel quas alias odit maiores magni consequatur.</div>
-	<div>Repellendus saepe eveniet assumenda ipsum, deleniti! Aperiam architecto animi deserunt quam illo totam? Minima, asperiores corporis voluptas voluptatem fuga, doloribus ex odio laborum, numquam quas omnis voluptates totam natus tempora.</div>
-	<div>Ea facere nisi architecto itaque, at nesciunt amet neque dicta ullam! Eaque consequuntur in repudiandae provident possimus, quibusdam cumque voluptatibus, maxime consequatur dolorem illum blanditiis quos minus, obcaecati omnis. Quam!</div>
-	<div>A eveniet saepe, voluptatem asperiores ducimus sunt cupiditate quis, ullam adipisci id, quam expedita ut necessitatibus accusamus vitae iure, sed nostrum! Architecto cupiditate nulla excepturi laudantium perferendis obcaecati, pariatur incidunt.</div>
+	<section class="container">
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus sit assumenda veniam eius quas modi praesentium ducimus dolorum quia nulla, a aut labore sed vel neque rem est blanditiis beatae!</div>
+		<div>Dolorem, nihil reiciendis quisquam, rerum nulla reprehenderit veritatis non accusantium illum quam deserunt nostrum perspiciatis earum natus in minima facere sint! Esse ad consequuntur adipisci consectetur magnam. Perspiciatis, iusto, maiores.</div>
+		<div>Illum omnis sit, sunt, reiciendis eligendi iste repellendus pariatur, tenetur eaque praesentium consequatur, quidem atque totam. Praesentium magni ad architecto quas cum laudantium debitis, at obcaecati dolore minus, in porro!</div>
+		<div>Voluptate unde ut sed magni, dolor vero recusandae obcaecati, in eum facilis blanditiis modi, aperiam nesciunt dolorum veniam beatae amet necessitatibus fugit esse dolores ea eos minima, mollitia tenetur dicta.</div>
+		<div>Alias quis, saepe perspiciatis necessitatibus suscipit ullam sit inventore pariatur iusto quas, dolorem praesentium. Cumque repellat culpa molestiae, cupiditate illo at necessitatibus reiciendis doloribus, numquam labore maxime perferendis commodi sed?</div>
+		<div>Veniam porro fugiat distinctio quidem, minima voluptatum, beatae labore architecto enim obcaecati voluptates placeat esse eaque explicabo facere consequatur adipisci accusamus animi aliquam minus, laboriosam ipsa laborum officia. Velit, minus!</div>
+		<div>Perspiciatis alias, sint illum in dicta earum expedita optio natus maxime tempora. Possimus deleniti ratione, quos ullam neque quo laboriosam magnam, quaerat labore vel quas alias odit maiores magni consequatur.</div>
+		<div>Repellendus saepe eveniet assumenda ipsum, deleniti! Aperiam architecto animi deserunt quam illo totam? Minima, asperiores corporis voluptas voluptatem fuga, doloribus ex odio laborum, numquam quas omnis voluptates totam natus tempora.</div>
+		<div>Ea facere nisi architecto itaque, at nesciunt amet neque dicta ullam! Eaque consequuntur in repudiandae provident possimus, quibusdam cumque voluptatibus, maxime consequatur dolorem illum blanditiis quos minus, obcaecati omnis. Quam!</div>
+		<div>A eveniet saepe, voluptatem asperiores ducimus sunt cupiditate quis, ullam adipisci id, quam expedita ut necessitatibus accusamus vitae iure, sed nostrum! Architecto cupiditate nulla excepturi laudantium perferendis obcaecati, pariatur incidunt.</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus sit assumenda veniam eius quas modi praesentium ducimus dolorum quia nulla, a aut labore sed vel neque rem est blanditiis beatae!</div>
+		<div>Dolorem, nihil reiciendis quisquam, rerum nulla reprehenderit veritatis non accusantium illum quam deserunt nostrum perspiciatis earum natus in minima facere sint! Esse ad consequuntur adipisci consectetur magnam. Perspiciatis, iusto, maiores.</div>
+		<div>Illum omnis sit, sunt, reiciendis eligendi iste repellendus pariatur, tenetur eaque praesentium consequatur, quidem atque totam. Praesentium magni ad architecto quas cum laudantium debitis, at obcaecati dolore minus, in porro!</div>
+		<div>Voluptate unde ut sed magni, dolor vero recusandae obcaecati, in eum facilis blanditiis modi, aperiam nesciunt dolorum veniam beatae amet necessitatibus fugit esse dolores ea eos minima, mollitia tenetur dicta.</div>
+		<div>Alias quis, saepe perspiciatis necessitatibus suscipit ullam sit inventore pariatur iusto quas, dolorem praesentium. Cumque repellat culpa molestiae, cupiditate illo at necessitatibus reiciendis doloribus, numquam labore maxime perferendis commodi sed?</div>
+		<div>Veniam porro fugiat distinctio quidem, minima voluptatum, beatae labore architecto enim obcaecati voluptates placeat esse eaque explicabo facere consequatur adipisci accusamus animi aliquam minus, laboriosam ipsa laborum officia. Velit, minus!</div>
+		<div>Perspiciatis alias, sint illum in dicta earum expedita optio natus maxime tempora. Possimus deleniti ratione, quos ullam neque quo laboriosam magnam, quaerat labore vel quas alias odit maiores magni consequatur.</div>
+		<div>Repellendus saepe eveniet assumenda ipsum, deleniti! Aperiam architecto animi deserunt quam illo totam? Minima, asperiores corporis voluptas voluptatem fuga, doloribus ex odio laborum, numquam quas omnis voluptates totam natus tempora.</div>
+		<div>Ea facere nisi architecto itaque, at nesciunt amet neque dicta ullam! Eaque consequuntur in repudiandae provident possimus, quibusdam cumque voluptatibus, maxime consequatur dolorem illum blanditiis quos minus, obcaecati omnis. Quam!</div>
+		<div>A eveniet saepe, voluptatem asperiores ducimus sunt cupiditate quis, ullam adipisci id, quam expedita ut necessitatibus accusamus vitae iure, sed nostrum! Architecto cupiditate nulla excepturi laudantium perferendis obcaecati, pariatur incidunt.</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus sit assumenda veniam eius quas modi praesentium ducimus dolorum quia nulla, a aut labore sed vel neque rem est blanditiis beatae!</div>
+		<div>Dolorem, nihil reiciendis quisquam, rerum nulla reprehenderit veritatis non accusantium illum quam deserunt nostrum perspiciatis earum natus in minima facere sint! Esse ad consequuntur adipisci consectetur magnam. Perspiciatis, iusto, maiores.</div>
+		<div>Illum omnis sit, sunt, reiciendis eligendi iste repellendus pariatur, tenetur eaque praesentium consequatur, quidem atque totam. Praesentium magni ad architecto quas cum laudantium debitis, at obcaecati dolore minus, in porro!</div>
+		<div>Voluptate unde ut sed magni, dolor vero recusandae obcaecati, in eum facilis blanditiis modi, aperiam nesciunt dolorum veniam beatae amet necessitatibus fugit esse dolores ea eos minima, mollitia tenetur dicta.</div>
+		<div>Alias quis, saepe perspiciatis necessitatibus suscipit ullam sit inventore pariatur iusto quas, dolorem praesentium. Cumque repellat culpa molestiae, cupiditate illo at necessitatibus reiciendis doloribus, numquam labore maxime perferendis commodi sed?</div>
+		<div>Veniam porro fugiat distinctio quidem, minima voluptatum, beatae labore architecto enim obcaecati voluptates placeat esse eaque explicabo facere consequatur adipisci accusamus animi aliquam minus, laboriosam ipsa laborum officia. Velit, minus!</div>
+		<div>Perspiciatis alias, sint illum in dicta earum expedita optio natus maxime tempora. Possimus deleniti ratione, quos ullam neque quo laboriosam magnam, quaerat labore vel quas alias odit maiores magni consequatur.</div>
+		<div>Repellendus saepe eveniet assumenda ipsum, deleniti! Aperiam architecto animi deserunt quam illo totam? Minima, asperiores corporis voluptas voluptatem fuga, doloribus ex odio laborum, numquam quas omnis voluptates totam natus tempora.</div>
+		<div>Ea facere nisi architecto itaque, at nesciunt amet neque dicta ullam! Eaque consequuntur in repudiandae provident possimus, quibusdam cumque voluptatibus, maxime consequatur dolorem illum blanditiis quos minus, obcaecati omnis. Quam!</div>
+		<div>A eveniet saepe, voluptatem asperiores ducimus sunt cupiditate quis, ullam adipisci id, quam expedita ut necessitatibus accusamus vitae iure, sed nostrum! Architecto cupiditate nulla excepturi laudantium perferendis obcaecati, pariatur incidunt.</div>
+	</section>
 </body>
 </html>

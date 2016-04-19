@@ -1,6 +1,7 @@
 $( document ).ready(function() {
-	$('.mainmenu__list-item').hover(function () {
-		$(this).children('ul').stop(true, false, true).slideToggle(300);
+	$('.mainmenu__list-item:not(.nochild)').hover( function () {
+		$('.mainmenu').toggleClass('hover');
+		$(this).children('ul').toggleClass('hover');
 	});
 
 	// Run scrollController on scroll
@@ -8,7 +9,7 @@ $( document ).ready(function() {
 
     	var Hello = $(this).scrollTop();
 
-    	if(Hello > 100){
+    	if(Hello > $('#topmenu').height()){
 			$('header').addClass('sticky');
     	}else{
     		$('header').removeClass('sticky');
